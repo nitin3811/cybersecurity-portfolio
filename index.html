@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nitin Maurya | Cybersecurity Portfolio</title>
+
+<style>
+
+/* GLOBAL STYLE */
+
+body{
+background:#0a0a0a;
+color:#00ff9c;
+font-family:monospace;
+margin:0;
+scroll-behavior:smooth;
+}
+
+/* HEADER */
+
+header{
+text-align:center;
+padding:60px 20px;
+border-bottom:1px solid #00ff9c;
+}
+
+header h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:18px;
+opacity:0.8;
+}
+
+.links a{
+color:#00ff9c;
+text-decoration:none;
+margin:10px;
+padding:8px 15px;
+border:1px solid #00ff9c;
+display:inline-block;
+}
+
+.links a:hover{
+background:#00ff9c;
+color:black;
+}
+
+/* SECTION */
+
+section{
+padding:60px 10%;
+}
+
+h2{
+border-bottom:1px solid #00ff9c;
+padding-bottom:10px;
+}
+
+/* SKILLS */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:20px;
+}
+
+.skill{
+border:1px solid #00ff9c;
+padding:10px 15px;
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.card{
+background:#111;
+padding:20px;
+border:1px solid #00ff9c;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 10px #00ff9c;
+}
+
+/* CONTACT */
+
+.contact p{
+margin:10px 0;
+}
+
+footer{
+text-align:center;
+padding:30px;
+border-top:1px solid #00ff9c;
+opacity:0.7;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Nitin Maurya</h1>
+
+<p>Cybersecurity Enthusiast | Penetration Testing | Security Research</p>
+
+<div class="links">
+
+<a href="https://github.com/nitin3811" target="_blank">GitHub</a>
+
+<a href="https://linkedin.com/in/nmxdw" target="_blank">LinkedIn</a>
+
+</div>
+
+</header>
+
+<section>
+
+<h2>About Me</h2>
+
+<p>
+Cybersecurity student with hands-on experience in penetration testing,
+vulnerability assessment, and offensive security tools. I build security
+automation tools in Python and maintain cybersecurity projects on GitHub.
+</p>
+
+</section>
+
+<section>
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Penetration Testing</div>
+<div class="skill">Web Application Security</div>
+<div class="skill">Network Security</div>
+<div class="skill">Python Security Tools</div>
+<div class="skill">Nmap</div>
+<div class="skill">Burp Suite</div>
+<div class="skill">Wireshark</div>
+<div class="skill">Metasploit</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+<h3>Python Network Port Scanner</h3>
+<p>
+Multi-threaded port scanning tool built with Python sockets to identify
+open ports and services.
+</p>
+</div>
+
+<div class="card">
+<h3>Password Strength Analyzer</h3>
+<p>
+Security tool that evaluates password entropy and resistance against
+dictionary attacks.
+</p>
+</div>
+
+<div class="card">
+<h3>DNS Spoofing Lab</h3>
+<p>
+Demonstration of ARP poisoning and DNS spoofing attacks using Ettercap.
+</p>
+</div>
+
+<div class="card">
+<h3>Cybersecurity Virtual Lab</h3>
+<p>
+Virtual penetration testing lab with Kali Linux and vulnerable machines.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Security Labs</h2>
+
+<p>TryHackMe – 100+ Labs Completed</p>
+<p>HackTheBox – 20+ Machines Completed</p>
+<p>PortSwigger Web Security Academy – XSS & SQL Injection Labs</p>
+
+</section>
+
+<section class="contact">
+
+<h2>Contact</h2>
+
+<p>Email: sbc2anvt@gmail.com</p>
+
+<p>GitHub: https://github.com/nitin3811</p>
+
+<p>LinkedIn: https://linkedin.com/in/nmxdw</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 Nitin Maurya | Cybersecurity Portfolio</p>
+
+</footer>
+
+<script>
+
+/* SIMPLE CARD ANIMATION */
+
+document.querySelectorAll(".card").forEach(card => {
+
+card.addEventListener("mouseover", () => {
+
+card.style.transform="scale(1.05)";
+
+});
+
+card.addEventListener("mouseout", () => {
+
+card.style.transform="scale(1)";
+
+});
+
+});
+
+/* TERMINAL STYLE MESSAGE */
+
+console.log("Cybersecurity Portfolio Loaded Successfully");
+
+</script>
+
+</body>
+</html>
