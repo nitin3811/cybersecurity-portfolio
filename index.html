@@ -7,49 +7,61 @@
 
 <style>
 
-/* GLOBAL STYLE */
-
 body{
-background:#0a0a0a;
-color:#00ff9c;
-font-family:monospace;
 margin:0;
-scroll-behavior:smooth;
+font-family:monospace;
+background:black;
+color:#00ff9c;
+overflow-x:hidden;
+}
+
+/* MATRIX BACKGROUND */
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
 }
 
 /* HEADER */
 
 header{
 text-align:center;
-padding:60px 20px;
-border-bottom:1px solid #00ff9c;
+padding:80px 20px;
 }
 
 header h1{
-font-size:42px;
-margin-bottom:10px;
+font-size:50px;
+margin:0;
 }
 
-header p{
+.terminal{
 font-size:18px;
-opacity:0.8;
+margin-top:10px;
 }
 
-.links a{
+/* NAV */
+
+nav{
+text-align:center;
+margin-bottom:40px;
+}
+
+nav a{
 color:#00ff9c;
+margin:0 15px;
 text-decoration:none;
-margin:10px;
-padding:8px 15px;
 border:1px solid #00ff9c;
-display:inline-block;
+padding:6px 12px;
 }
 
-.links a:hover{
+nav a:hover{
 background:#00ff9c;
 color:black;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 section{
 padding:60px 10%;
@@ -74,7 +86,7 @@ border:1px solid #00ff9c;
 padding:10px 15px;
 }
 
-/* PROJECTS */
+/* PROJECT CARDS */
 
 .projects{
 display:grid;
@@ -92,20 +104,38 @@ transition:0.3s;
 
 .card:hover{
 transform:scale(1.05);
-box-shadow:0 0 10px #00ff9c;
+box-shadow:0 0 15px #00ff9c;
 }
 
-/* CONTACT */
+/* CONTACT FORM */
 
-.contact p{
+.contact-form{
+max-width:500px;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:12px;
 margin:10px 0;
+background:#111;
+border:1px solid #00ff9c;
+color:#00ff9c;
+font-family:monospace;
+}
+
+.contact-form button{
+padding:12px 20px;
+background:#00ff9c;
+border:none;
+color:black;
+cursor:pointer;
 }
 
 footer{
 text-align:center;
 padding:30px;
 border-top:1px solid #00ff9c;
-opacity:0.7;
 }
 
 </style>
@@ -113,44 +143,49 @@ opacity:0.7;
 
 <body>
 
+<canvas id="matrix"></canvas>
+
 <header>
 
 <h1>Nitin Maurya</h1>
 
-<p>Cybersecurity Enthusiast | Penetration Testing | Security Research</p>
-
-<div class="links">
-
-<a href="https://github.com/nitin3811" target="_blank">GitHub</a>
-
-<a href="https://linkedin.com/in/nmxdw" target="_blank">LinkedIn</a>
-
+<div class="terminal">
+<span id="typing"></span>
 </div>
 
 </header>
 
-<section>
+<nav>
+
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<section id="about">
 
 <h2>About Me</h2>
 
 <p>
-Cybersecurity student with hands-on experience in penetration testing,
-vulnerability assessment, and offensive security tools. I build security
-automation tools in Python and maintain cybersecurity projects on GitHub.
+Cybersecurity enthusiast focused on penetration testing,
+vulnerability assessment and security automation. I build
+security tools in Python and research web vulnerabilities.
 </p>
 
 </section>
 
-<section>
+<section id="skills">
 
 <h2>Skills</h2>
 
 <div class="skills">
 
 <div class="skill">Penetration Testing</div>
-<div class="skill">Web Application Security</div>
+<div class="skill">Web Security</div>
 <div class="skill">Network Security</div>
-<div class="skill">Python Security Tools</div>
+<div class="skill">Python</div>
 <div class="skill">Nmap</div>
 <div class="skill">Burp Suite</div>
 <div class="skill">Wireshark</div>
@@ -160,65 +195,59 @@ automation tools in Python and maintain cybersecurity projects on GitHub.
 
 </section>
 
-<section>
+<section id="projects">
 
 <h2>Projects</h2>
 
 <div class="projects">
 
 <div class="card">
-<h3>Python Network Port Scanner</h3>
-<p>
-Multi-threaded port scanning tool built with Python sockets to identify
-open ports and services.
-</p>
+<h3>Python Port Scanner</h3>
+<p>Multi-threaded network port scanner built using Python sockets.</p>
 </div>
 
 <div class="card">
-<h3>Password Strength Analyzer</h3>
-<p>
-Security tool that evaluates password entropy and resistance against
-dictionary attacks.
-</p>
+<h3>Password Analyzer</h3>
+<p>Entropy based password strength evaluation tool.</p>
 </div>
 
 <div class="card">
 <h3>DNS Spoofing Lab</h3>
-<p>
-Demonstration of ARP poisoning and DNS spoofing attacks using Ettercap.
-</p>
+<p>Network attack simulation using ARP poisoning and Ettercap.</p>
 </div>
 
 <div class="card">
 <h3>Cybersecurity Virtual Lab</h3>
-<p>
-Virtual penetration testing lab with Kali Linux and vulnerable machines.
-</p>
+<p>Penetration testing lab environment using Kali Linux.</p>
 </div>
 
 </div>
 
 </section>
 
-<section>
+<section id="contact">
 
-<h2>Security Labs</h2>
-
-<p>TryHackMe – 100+ Labs Completed</p>
-<p>HackTheBox – 20+ Machines Completed</p>
-<p>PortSwigger Web Security Academy – XSS & SQL Injection Labs</p>
-
-</section>
-
-<section class="contact">
-
-<h2>Contact</h2>
+<h2>Contact Me</h2>
 
 <p>Email: sbc2anvt@gmail.com</p>
+<p>GitHub: github.com/nitin3811</p>
+<p>LinkedIn: linkedin.com/in/nmxdw</p>
 
-<p>GitHub: https://github.com/nitin3811</p>
+<div class="contact-form">
 
-<p>LinkedIn: https://linkedin.com/in/nmxdw</p>
+<form id="contactForm">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
 
 </section>
 
@@ -230,27 +259,79 @@ Virtual penetration testing lab with Kali Linux and vulnerable machines.
 
 <script>
 
-/* SIMPLE CARD ANIMATION */
+/* MATRIX BACKGROUND */
 
-document.querySelectorAll(".card").forEach(card => {
+const canvas=document.getElementById("matrix");
+const ctx=canvas.getContext("2d");
 
-card.addEventListener("mouseover", () => {
+canvas.height=window.innerHeight;
+canvas.width=window.innerWidth;
 
-card.style.transform="scale(1.05)";
+const letters="01";
+const fontSize=14;
+const columns=canvas.width/fontSize;
+
+const drops=[];
+
+for(let x=0;x<columns;x++)
+drops[x]=1;
+
+function draw(){
+
+ctx.fillStyle="rgba(0,0,0,0.05)";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+
+ctx.fillStyle="#00ff9c";
+ctx.font=fontSize+"px monospace";
+
+for(let i=0;i<drops.length;i++){
+
+const text=letters.charAt(Math.floor(Math.random()*letters.length));
+
+ctx.fillText(text,i*fontSize,drops[i]*fontSize);
+
+if(drops[i]*fontSize>canvas.height && Math.random()>0.975)
+drops[i]=0;
+
+drops[i]++;
+
+}
+
+}
+
+setInterval(draw,33);
+
+/* TERMINAL TYPING EFFECT */
+
+const text="Penetration Tester | Security Researcher | Python Security Tools Developer";
+
+let i=0;
+
+function typing(){
+
+if(i<text.length){
+
+document.getElementById("typing").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(typing,50);
+
+}
+
+}
+
+typing();
+
+/* CONTACT FORM */
+
+document.getElementById("contactForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Message sent successfully!");
 
 });
-
-card.addEventListener("mouseout", () => {
-
-card.style.transform="scale(1)";
-
-});
-
-});
-
-/* TERMINAL STYLE MESSAGE */
-
-console.log("Cybersecurity Portfolio Loaded Successfully");
 
 </script>
 
